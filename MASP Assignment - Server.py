@@ -97,7 +97,8 @@ if __name__ == '__main__':
                     check = split_cmd[1]
                     cmd_verified = True
                 except:
-                    pass
+                    print('Missing Argument!')
+                    print(cmds[a_cmds.index(split_cmd[0])][3])
             else:
                 cmd_verified = True
         else:
@@ -107,9 +108,7 @@ if __name__ == '__main__':
             return_message = conn.recv(51200)  # Wait for reply with 51200 Bytes
             return_message = return_message.decode()  # Decode reply message
             print(f'Reply >> {return_message}')
-        else:
-            print('Missing Argument!')
-            print(cmds[a_cmds.index(split_cmd[0])][3])
+            
 
         if split_cmd[0] == 'exit':
             exit()
